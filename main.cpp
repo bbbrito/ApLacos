@@ -47,6 +47,50 @@ int main(int argc, char **argv)
     for(int i = 10; i > 10; i--)
         cout << "O valor apos o incremento eh: " << i << '\n';
         
+    //O Incremento ocorre de forma automática
+    //Um comando, não precisa usar chaves
+    int count = 0;
+    int nValor;
+    double valor;
+    double soma;
+    
+    
+    do
+    {
+        cout << "O valor apos o incremento eh: " << count << '\n';
+        count++;
+    } while(count < 10);
+    
+    cout << "\n\nDigite o numero de valores a serem somados:\n";
+    cin >> nValor;
+    
+    count = 0;
+    soma = 0;
+    while(count < nValor)
+    {
+        cout << "Digite um valor: " << '\n';
+        cin >> valor;
+        if(valor < 0)
+            continue;
+            
+        soma += valor;
+        count++;
+    }
+    if (count > 0)
+        cout << "A media eh: " << soma/count << '\n';
+        
+        
+    cout << "\n\nDigite valores positivos a serem somados ou qualquer valor negativo para parar:\n";
+    
+    while (true)
+    {
+        cout << "Digite o valor: " << '\n';
+        cin >> valor;
+        
+        if (valor < 0)
+            break;
+    }
+        
     system ("pause");  
     return 0;
 
